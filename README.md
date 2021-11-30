@@ -29,21 +29,33 @@ The dataset we were going to work with initially contained [love letters](https:
 ## Data preparation
 
 First of all, we processed all the examples we collected and divided each piece of text into sentences. Then we checked all the sentences by ourselves and removed those that were too long or lost their meaning without context. With prepared corpus we tokenized each word and constructed the vocabulary.  
-
-We decided to make next word prediction based on two previos words, therefore we needed to split each sentence on saples of length 3 words, where the first two words are input data and the last word is the target.  
+  
 
 ## Models
 
-### 1. Markov chain
+### 1. LSTM
 
-### 2. LSTM
+We decided to make next word prediction model that takes as an input two words and output the possible following word. To prepare data for such mosel, we split each sentence on samples of length 3 words, where the first two words are input data and the last word is the target.
+
 #### Architure
 
-
-#### Embeddings
-We use Glove embedding for our data. 
+The model has following architecture:
+```
+LSTM_Model(
+  (embedding): Embedding(VOCAB_SIZE, EMBEDDING_SIZE, padding_idx=0)
+  (lstm): LSTM(EMBEDDING_SIZE, HIDDEN_DIM, batch_first=True)
+  (linear): Linear(in_features=HIDDEN_DIM, out_features=VOCAB_SIZE, bias=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (softmax): Softmax(dim=None)
+)
+```
+Since the dataset is not big enough, a large number of layers would negatively affect the training of the model. For embedding layer we used pretrained GloVe embeddings with 100 dimensions.
+ 
 
 
 ### 3. GPT
 
+## Results
+
+## Further work
 

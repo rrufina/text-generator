@@ -35,9 +35,7 @@ First of all, we processed all the examples we collected and divided each piece 
 
 ### 1. LSTM
 
-We decided to make next word prediction model that takes as an input two words and output the possible following word. To prepare data for such mosel, we split each sentence on samples of length 3 words, where the first two words are input data and the last word is the target.
-
-#### Architure
+We decided to make next word prediction model that takes as an input two words and output the possible following word. To prepare data for such model, we split each sentence on samples of length 3 words, where the first two words are input data and the last word is the target.
 
 The model has following architecture:
 ```
@@ -45,15 +43,15 @@ LSTM_Model(
   (embedding): Embedding(VOCAB_SIZE, EMBEDDING_SIZE, padding_idx=0)
   (lstm): LSTM(EMBEDDING_SIZE, HIDDEN_DIM, batch_first=True)
   (linear): Linear(in_features=HIDDEN_DIM, out_features=VOCAB_SIZE, bias=True)
-  (dropout): Dropout(p=0.2, inplace=False)
-  (softmax): Softmax(dim=None)
+  (dropout): Dropout(p=0.2)
+  (softmax): Softmax()
 )
 ```
-Since the dataset is not big enough, a large number of layers would negatively affect the training of the model. For embedding layer we used pretrained GloVe embeddings with 100 dimensions.
+Since the dataset is not big enough, a large number of layers would negatively affect the training of the model. For embedding layer we used pretrained GloVe embeddings with 100 dimensions. As activation function we used Softamax that will calculate probability of each word in dictionary to be the right predicted word.
  
 
 
-### 3. GPT
+### 2. GPT
 
 ## Results
 

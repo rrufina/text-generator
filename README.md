@@ -24,7 +24,7 @@ After reading some explanations about these two techniques, we decided to choose
 ## Dataset
 
 The dataset we were going to work with initially contained [love letters](https://www.kaggle.com/fillerink/love-letters). 
-Since this data was not enough for decent results, we expanded it and added compliments collected manually from several sites.
+Since this data was not enough for decent results, we expanded it and added compliments collected manually from several sites([1](https://www.thetalka.com/love-letters-for-her/), [2](https://memesbams.com/love-letters-for-her/), [3](https://www.legit.ng/1218152-deep-love-letters-ll-cry.html)).
 
 
 ## Data preparation
@@ -61,7 +61,7 @@ For fine-tuning this model, we conducted a series of experiments where changed p
 We determined, that RMSprop optimizer shows better results than others. 
 Also we found out the optimal size for hidden dimension that will not interfere with training.
 
-When we generate a new text, the first two tokens for models's input are selected as <SOS> tag and random word from the vocabulary. Then the model repeatedly predicts next word until it predicts the <EOS> tag.
+When we generate a new text, the first two tokens for models's input are selected as <SOS> tag and random word from the vocabulary. Then the model repeatedly predicts next word until it predicts the <EOS> tag. To make the outputs more diverse, we randomly choose one of the two words with the highest probability.
 
 ### 2. GPT-2
 

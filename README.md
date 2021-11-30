@@ -64,6 +64,9 @@ When we generate a new text, the first two tokens for models's input are selecte
 
 ### 2. GPT-2
 
+The model generated from the scratch gave us the understanding of the text generatio process, we learned what techniques to what problems are applicable. But we understanded the shortcut of this approach, we learn the model to generate meaningful text and force it to make this text look like compliment at the same time and the dataset. The task could be splitted on the 2 subtasks, according  to the issue above. The generation of the meaningful text is very complicated task, it requires enormous dataset to work with and very deep neural network to produce soffisticated results. The training will require computing and time resources unavailabe for us, that's why we decided to use pre-trained model for text generation. 
+The state-of-the-art text generation models are GPT-2 and GPT-3 developed by the OpenAI. Since the 3rd version model's API is closed now due to the regularisations, we used the gpt2-medium pretrained model in our problem solving task. This model will answer for the generation of the meaningful text, but we need to train it so the compliments will be generated at the end.
+  
 ## Results
 
 The LSTM model was trained for 250 epochs so that the output results looked more or less acceptable. The quality of the generated sentences can only be assessed by ourselves. For evaluation we choosed the generated sentences with length more than 3 and less than 25. In the most cases, the sentences look like normal sentences but don't make sence. Some outputs could be considered as compliments, however this is more an accident than an indicator of the success of the model.

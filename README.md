@@ -83,6 +83,16 @@ The LSTM model was trained for 250 epochs so that the output results looked more
 * All my life i to you is addiction same one are a life.
   
 For GPT-2 results are better. 
+The GPT-2 model trained for 100 epochs using the suggested by hugging face scheduler. Similarly, the quality of the output according to 2 criteria: meaningful text, compliment intent was evaluated subjectively, by us. the maximum lenght of the sentence is 30 words. The outputs presented by this model is much more understandable and with clear intent.
+  
+### Examples of generated compliments
+  
+* In your company you are an angel who came into existence and brought joy to all who loved you.
+* You are the best thing ever! 
+* You are beautiful.   
+* It was really beautiful and I love how your eyes make me feel.
+* I am so grateful to you for bringing this world together.
+* I want you to know that i am not afraid to express my love to you.
   
   
 ## Further work
@@ -90,3 +100,5 @@ For GPT-2 results are better.
 The most important limitation we have encountered is not enough data for training model, therefore the main goal for the further work is to expand the dataset. 
 
 Another essential issue is tracking the meaning of the entire sentence and predicting the next word based on all the previous words in the sentence. To do this, you can use an autoencoder architecture with an attention mechanism.
+
+ Because we made the dataset to be acceptable by 2 models, the GPT-2 model may produce sentences not with capital letter at the beginning and sometimes missing full stop at the end of the compliment. This issue has to be fixed for better looking results

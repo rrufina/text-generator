@@ -28,8 +28,8 @@ The dataset we were going to work with initially contained [love letters](https:
 
 ## Data preparation
 
-First of all, we processed all the examples we collected and divided each piece of text into sentences. Then we checked all the sentences by ourselves and removed those that were too long or lost their meaning without context. With prepared corpus we tokenized each word and constructed the vocabulary.  
-  
+First of all, we processed all the examples we collected, removed duplicates, and divided each piece of text into sentences. Then we checked all the sentences by ourselves and removed those that were too long or lost their meaning without context. With prepared corpus we tokenized each word and constructed the vocabulary.
+
 
 ## Models
 
@@ -47,9 +47,9 @@ LSTM_Model(
   (softmax): Softmax()
 )
 ```
-Since the dataset is not big enough, a large number of layers would negatively affect the training of the model. For embedding layer we used pretrained GloVe embeddings with 100 dimensions. As activation function we used Softamax that will calculate probability of each word in dictionary to be the right predicted word.
+Since the dataset is not big enough, a large number of layers would negatively affect the training of the model. For embedding layer we used pretrained GloVe embeddings with 100 dimensions. As activation function we used Softamax that will calculate probability of each word in dictionary to be the right predicted word. For loss function we choose Cross Entropy since the problem of word prediction could be considered as classification task with the number of classes equals the size of vocabulary.
  
-
+For fine-tuning this model, we conducted a series of experiments where changed parameters and monitored results. We determined, that RMSprop optimizer show better results than others. Also we find out optimal size for hidden dimension that will not interfere with training.
 
 ### 2. GPT
 

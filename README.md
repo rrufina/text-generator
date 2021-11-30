@@ -83,6 +83,6 @@ For GPT-2 results are better.
   
 ## Further work
 
-The most important limitation we have encountered is not enough data for training model, therefore the main goal for the further work is to expand the dataset. 
+The most important limitation we have encountered is not enough data to successfully train the model, therefore the main goal for the further work is to expand the dataset. 
 
 Another essential issue is tracking the meaning of the entire sentence and predicting the next word based on all the previous words in the sentence. To do this, you can use an autoencoder architecture with an attention mechanism.

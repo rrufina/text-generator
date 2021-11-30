@@ -12,18 +12,18 @@ Compliment Generator
 
 ## Overview
 
-Мб добавить какое нибудь описание text generation в целом.
+The text generation is the subfield of the Natural Language Processing(NLP) task. The main goal of it is to generate random but still meaningful texts. The generated list of sentences has to satisfy some requirements, one of them could be sentiments or emotions shown. These requirements bring other problems to appear: could we teach the generator the sense of humor or could the generated text be polite? One of these tasks we will try to solve in this project: The generation of compliments. 
 
-For text generation we could determine two approaches:
+In general, for text generation we could determine two approaches:
 * Character-Level Generation
 * Word-Level Generation
 
-After reading some explanations about these two techniques, we decided to choose word prediction method, since it takes less time for training and gives a smaller error.
+After reading some explanations about these two techniques, we decided to choose the word prediction method, since it takes less time for training and gives a smaller error. In addition, we can use some state-of-the-art pre-trained models for text generation in word-level generation method.
 
 
 ## Dataset
 
-The dataset we were going to work with initially contained [love letters](https://www.kaggle.com/fillerink/love-letters). 
+The initial intent was to find ready-to-use dataset of the compliments, but since there is no such dataset we decided to find suplimentary ones. The dataset we were going to work with initially contained [love letters](https://www.kaggle.com/fillerink/love-letters). 
 Since this data was not enough for decent results, we expanded it and added compliments collected manually from several sites([1](https://www.thetalka.com/love-letters-for-her/), [2](https://memesbams.com/love-letters-for-her/), [3](https://www.legit.ng/1218152-deep-love-letters-ll-cry.html)).
 
 
@@ -83,6 +83,6 @@ For GPT-2 results are better.
   
 ## Further work
 
-The most important limitation we have encountered is not enough data to successfully train the model, therefore the main goal for the further work is to expand the dataset. 
+The most important limitation we have encountered is not enough data for training model, therefore the main goal for the further work is to expand the dataset. 
 
 Another essential issue is tracking the meaning of the entire sentence and predicting the next word based on all the previous words in the sentence. To do this, you can use an autoencoder architecture with an attention mechanism.

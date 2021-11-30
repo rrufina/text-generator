@@ -23,8 +23,7 @@ After reading some explanations about these two techniques, we decided to choose
 
 ## Dataset
 
-The initial intent was to find ready-to-use dataset of the compliments, but since there is no such dataset we decided to find suplimentary ones. The dataset we were going to work with initially contained [love letters](https://www.kaggle.com/fillerink/love-letters). 
-Since this data was not enough for decent results, we expanded it and added compliments collected manually from several sites([1](https://www.thetalka.com/love-letters-for-her/), [2](https://memesbams.com/love-letters-for-her/), [3](https://www.legit.ng/1218152-deep-love-letters-ll-cry.html)).
+The initial intent was to find ready-to-use dataset of the compliments, but since there is no such dataset we decided to find suplimentary ones. The dataset we were going to work with initially contained [love letters](https://www.kaggle.com/fillerink/love-letters). Using this dataset the model will learn to produce text with love, warm intent. But this is not the results we expect, to teach the model to make not only right intended text but compliments we expanded the dataset and added compliments collected manually from several sites([1](https://www.thetalka.com/love-letters-for-her/), [2](https://memesbams.com/love-letters-for-her/), [3](https://www.legit.ng/1218152-deep-love-letters-ll-cry.html)).
 
 
 ## Data preparation
